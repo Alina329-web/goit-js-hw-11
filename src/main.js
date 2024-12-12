@@ -20,7 +20,8 @@ form.addEventListener('submit', event => {
   }
 
   clear();
-  loader.classList.remove('hidden');
+  loader.style.display = 'block';
+  //   loader.classList.remove('hidden');
 
   back(query)
     .then(data => {
@@ -34,6 +35,7 @@ form.addEventListener('submit', event => {
       iziToast.error({ message: 'Error fetching images. Please try again.' });
     })
     .finally(() => {
-      loader.classList.add('hidden');
+      //   loader.classList.add('hidden');
+      loader.style.display = 'none';
     });
 });
