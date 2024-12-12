@@ -9,7 +9,7 @@ const loader = document.querySelector('.loader');
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const query = event.target.elements.name.value.trim();
+  const query = event.target.elements.query.value.trim();
   if (!query) {
     iziToast.error({
       message:
